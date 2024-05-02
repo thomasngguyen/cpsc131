@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+
+class Stack {
+private:
+    std::vector<char> elements;
+
+public:
+    // Method to check if the stack is empty
+    bool isEmpty() {
+        return elements.empty();
+    }
+
+    // Method to push an element onto the stack
+    void push(char c) {
+        elements.push_back(c);
+    }
+
+    // Method to pop an element from the stack
+    void pop() {
+        if (!isEmpty()) {
+            elements.pop_back();
+        }
+    }
+
+    // Method to get the top element of the stack
+    char top() {
+        if (!isEmpty()) {
+            return elements.back();
+        }
+        return '\0'; // return null character if stack is empty
+    }
+};
